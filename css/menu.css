@@ -1,0 +1,98 @@
+header{
+    position: fixed;
+    z-index: 1000;
+    /* Propeiedades de Coordenadas */
+    top: 0;
+    left: 0;
+    right: 0;
+ 
+}
+.menu{
+
+    list-style: none;
+    background-color:rgb( 115, 128, 183);
+    padding: 2px;
+    margin: 0;
+    overflow: hidden;
+
+}
+
+.menu li{
+    font-size: 16px;
+    float: left;
+}
+
+.menu li a{
+    color: white;
+    padding:10px 15px;
+    display:block;
+ 
+   
+}
+
+nav a:hover{  
+    background-image: linear-gradient(white,rgb(115, 128, 183),white);
+    color:rgb(0, 0, 0);
+    transition: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    text-decoration: overline;
+    transform:scale(1.05);
+     border-radius: 8px;
+}
+    /* o box-sizing  serve para alterar o comportamento do box */
+nav a{  
+    background-color:rgb(115, 128, 183);
+    color:rgb(255, 255, 255);
+    padding: 2px;
+
+    display:inline-block ;
+    /* border-radius: 0px; */
+    transition: 0.5s}
+
+
+
+/*  @media screen and (max-width:760px){
+        .menu li{ float: none;}
+        .menu li a { text-align: center;}
+
+}  */
+
+
+/*  @media screen and (max-width : 760px){
+
+    .menu.responsivo {
+        position: relative;
+        float: none;
+        display: inline;
+
+    
+    }} 
+ */
+
+/* Versão 2: definitiva */
+/* O ícone do menu não seja exibido no início */
+.menu li.icone { display: none; }
+@media screen and (max-width: 600px){
+    /* Itens do menu não serão exibidos */
+  .menu li { display: none; }
+  /* Ícone do menu volta a ser exibido e à direita */
+  .menu li.icone {
+    display: block;
+    float: right;
+  }
+  /* Contexto de posicionamento para o menu QUANDO
+  em modo responsivo. */
+  .menu.responsivo { position: relative; }
+/* Posicionando o ícone de acordo
+  com as coordenadas */
+  .menu.responsivo li.icone {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  /* Os itens/links do menu são exibidos
+  em linha, e o float é desativado */
+  .menu.responsivo li {
+    float: none;
+    display: inline;
+  }
+}

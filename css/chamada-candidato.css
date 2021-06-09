@@ -1,0 +1,41 @@
+.ch-candidato{
+background-color: rgb(243, 187, 3) ;
+color: rgb(255, 255, 255);
+/* position: absolute;  serve para deixar o objeto flutuando na pagina e posicionar onde quiser*/
+position: absolute;
+width: 160px;
+height: 160px;
+top: 400px;
+right: 50px;
+border-radius: 100%;
+text-align: center;
+padding-top: 55px;
+text-decoration: none;
+font-weight: bold;
+text-transform: uppercase;
+transform: rotate(5deg);
+transition: 0.5s;
+}
+
+.hoje{
+    font-size: 24px;
+    color: tomato;
+}
+
+.ch-candidato:hover, .ch-candidato:focus {
+  background-color: darkblue;
+  transform: rotate(10deg);
+
+}
+
+@media screen and (max-width:740px ) {
+    .ch-candidato{
+        width: 130px;
+        height: 130px;
+        font-size: 10px;
+        padding-top: 10px;}
+    .hoje{ 
+        font-size: 14px;
+         color: darkred;}
+
+    }
